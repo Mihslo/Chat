@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="320.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.chatclient.HelloController">
+    <MenuBar>
+        <Menu text="File">
+         <MenuItem onAction="#mockAction" text="Open" />
+            <MenuItem onAction="#NetConnection" text="Connect" />
+            <MenuItem onAction="#mockAction" text="Options" />
+            <MenuItem onAction="#closeApplication" text="Exit" />
+        </Menu>
+        <Menu text="Edit">
+            <MenuItem onAction="#mockAction" text="Open" />
+            <MenuItem onAction="#NetConnection" text="Connect" />
+            <MenuItem onAction="#mockAction" text="Options" />
+            <MenuItem onAction="#closeApplication" text="Exit" />
+        </Menu>
+        <Menu text="Help">
+            <MenuItem onAction="#mockAction" text="Open" />
+            <MenuItem onAction="#NetConnection" text="Connect" />
+            <MenuItem onAction="#mockAction" text="Options" />
+            <MenuItem onAction="#closeApplication" text="Exit" />
+        </Menu>
+    </MenuBar>
+    <HBox VBox.vgrow="ALWAYS">
+        <TextArea fx:id="chatArea" editable="false" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+            <HBox.margin>
+                <Insets left="6.0" right="6.0" />
+            </HBox.margin>
+        </TextArea>
+        <ListView fx:id="contacts" prefWidth="150.0">
+            <HBox.margin>
+                <Insets left="6.0" right="6.0" />
+            </HBox.margin>
+        </ListView>
+
+    </HBox>
+
+    <HBox VBox.vgrow="ALWAYS">
+        <TextField fx:id="inputField" onAction="#Message" prefHeight="65.0" HBox.hgrow="ALWAYS">
+            <HBox.margin>
+                <Insets left="6.0" right="6.0" />
+            </HBox.margin>
+        </TextField>
+      <HBox>
+         <children>
+              <Button  minWidth="150" onAction="#clikEnter" prefHeight="65.0" text="Enter" />
+         </children>
+      </HBox>
+        <VBox.margin>
+            <Insets bottom="5.0" />
+        </VBox.margin>
+
+    </HBox>
+
+</VBox>
